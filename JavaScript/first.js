@@ -6,43 +6,47 @@ var html = document.getElementById("html");
 var css = document.getElementById("css");
 var nx = document.getElementById("nx");
 
-solidworks.addEventListener("mouseover", func, false);
-solidworks.addEventListener("mouseout", func1, false);
+solidworks.addEventListener("mouseover", placer, false);
+solidworks.addEventListener("mouseout", remove, false);
 
-fusion.addEventListener("mouseover", func, false);
-fusion.addEventListener("mouseout", func1, false);
+fusion.addEventListener("mouseover", placer, false);
+fusion.addEventListener("mouseout", remove, false);
 
-c.addEventListener("mouseover", func, false);
-c.addEventListener("mouseout", func1, false);
+c.addEventListener("mouseover", placer, false);
+c.addEventListener("mouseout", remove, false);
 
-python.addEventListener("mouseover", func, false);
-python.addEventListener("mouseout", func1, false);
+python.addEventListener("mouseover", placer, false);
+python.addEventListener("mouseout", remove, false);
 
-html.addEventListener("mouseover", func, false);
-html.addEventListener("mouseout", func1, false);
+html.addEventListener("mouseover", placer, false);
+html.addEventListener("mouseout", remove, false);
 
-css.addEventListener("mouseover", func, false);
-css.addEventListener("mouseout", func1, false);
+css.addEventListener("mouseover", placer, false);
+css.addEventListener("mouseout", remove, false);
 
-nx.addEventListener("mouseover", func, false);
-nx.addEventListener("mouseout", func1, false);
+nx.addEventListener("mouseover", placer, false);
+nx.addEventListener("mouseout", remove, false);
 
-let test = document.querySelector('#test');
-const parentwidth = document.querySelector('#about').offsetWidth
-let skill = "80"
-let width = (skill * parentwidth / 100)
-function func()
+function placer()
 {
+  func("100", "#49ffc9bb")
+}
+
+const parentwidth = document.querySelector('#about').offsetWidth
+
+function func(percentage, color)
+{
+  let width = (percentage * parentwidth / 100)
   var div = document.createElement("div");
   const parentheight = document.querySelector('#about').offsetHeight
   div.id = "temp";
   div.style.position = "absolute";
   div.style.margin = "0";
   div.style.height = parentheight + "px";
-  div.style.backgroundColor = "#4900c9bb";
+  div.style.backgroundColor = color;
   div.style.borderRadius = "30px 0 0 30px";
   div.style.color = "white";
-  div.innerHTML = "%" + skill;
+  div.innerHTML = "%" + percentage;
   div.style.textAlign = "center";
   div.style.width = "1px";
   document.getElementById("about").appendChild(div);
@@ -55,7 +59,7 @@ function func()
   } );
 }
 
-function func1()
+function remove()
 {
    var temp = document.getElementById("temp");
    temp.remove();
