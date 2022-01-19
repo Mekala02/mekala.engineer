@@ -73,7 +73,8 @@ if (mediaQuery.matches) {
     div.style.borderRadius = "30px 0 0 30px";
     div.style.color = "white";
     div.innerHTML = "%" + percentage;
-    div.style.fontSize = parentwidth + "%";
+    //div.style.fontSize = parentwidth + "%";
+    div.style.fontSize = "1";
     div.style.alignItems = "center";
     div.style.justifyContent = "center";
     div.style.opacity = "0.5";
@@ -83,9 +84,11 @@ if (mediaQuery.matches) {
     //Animation
     div.animate({
       width: width + "px",
+      fontSize: parentwidth + "%",
     }, {
       // timing options
       duration: 500,
+
       fill: 'forwards'
     } );
   }
