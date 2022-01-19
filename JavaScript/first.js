@@ -2,9 +2,8 @@ var item = document.querySelectorAll(".skilmark");
 item[0].addEventListener("mouseover", func, false);
 item[0].addEventListener("mouseout", func1, false);
 
-var asd = "50"
 let test = document.querySelector('#test');
-let witdh = "10"
+let witdh = "50"
 function func()
 {
   var div = document.createElement("div");
@@ -17,11 +16,15 @@ function func()
   div.style.color = "white";
   div.innerHTML = "%" + witdh;
   div.style.textAlign = "center";
-  div.style.width = witdh + "%";
+  div.style.width = "1px";
   document.getElementById("about").appendChild(div);
   div.animate({
-    width: "300px", 
-  }, 1500 );
+    width: witdh + "%",
+  }, {
+    // timing options
+    duration: 1000,
+    fill: 'forwards'
+  } );
 }
 
 function func1()
