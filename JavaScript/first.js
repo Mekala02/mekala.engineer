@@ -77,7 +77,7 @@ if (mediaQuery.matches) {
     div.style.fontSize = "1";
     div.style.alignItems = "center";
     div.style.justifyContent = "center";
-    div.style.opacity = "0.5";
+    div.style.opacity = "0.0001";
     div.style.width = "0.0001px";
     div.style.pointerEvents = "none";
     document.getElementById("about").appendChild(div);
@@ -85,6 +85,7 @@ if (mediaQuery.matches) {
     div.animate({
       width: width + "px",
       fontSize: parentwidth + "%",
+      opacity: "0.8",
     }, {
       // timing options
       duration: 500,
