@@ -1,12 +1,31 @@
-var item = document.querySelectorAll(".skilmark");
+var solidworks = document.getElementById("solidworks");
+var fusion = document.getElementById("fusion");
+var c = document.getElementById("c");
+var python = document.getElementById("python");
+var html = document.getElementById("html");
+var css = document.getElementById("css");
+var nx = document.getElementById("nx");
 
-for (let i = 0; i < item.length; i++) {
-  item[i].addEventListener("mouseover", func, false);
-  item[i].addEventListener("mouseout", func1, false);
-}
+solidworks.addEventListener("mouseover", func, false);
+solidworks.addEventListener("mouseout", func1, false);
 
+fusion.addEventListener("mouseover", func, false);
+fusion.addEventListener("mouseout", func1, false);
 
+c.addEventListener("mouseover", func, false);
+c.addEventListener("mouseout", func1, false);
 
+python.addEventListener("mouseover", func, false);
+python.addEventListener("mouseout", func1, false);
+
+html.addEventListener("mouseover", func, false);
+html.addEventListener("mouseout", func1, false);
+
+css.addEventListener("mouseover", func, false);
+css.addEventListener("mouseout", func1, false);
+
+nx.addEventListener("mouseover", func, false);
+nx.addEventListener("mouseout", func1, false);
 
 let test = document.querySelector('#test');
 const parentwidth = document.querySelector('#about').offsetWidth
