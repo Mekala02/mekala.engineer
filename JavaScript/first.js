@@ -71,7 +71,7 @@ function func(percentage, color)
   div.style.color = "white";
   div.innerHTML = "%" + percentage;
   div.style.textAlign = "center";
-  div.style.width = "1px";
+  div.style.width = "0.001px";
   document.getElementById("about").appendChild(div);
   div.animate({
     width: width + "px",
