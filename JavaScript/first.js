@@ -29,31 +29,31 @@ nx.addEventListener("mouseout", remove, false);
 
 function placersolidworks()
 {
-  func("85", "#e31818bb")
+  func("85", "#e3181866")
 }
 function placerfusion()
 {
-  func("90", "#d8852fbb")
+  func("90", "#d8852f66")
 }
 function placerc()
 {
-  func("60", "#00599dbb")
+  func("60", "#00599d66")
 }
 function placerpython()
 {
-  func("60", "#ffde52bb")
+  func("60", "#ffde5266")
 }
 function placerhtml()
 {
-  func("80", "#dc4a25bb")
+  func("80", "#dc4a2566")
 }
 function placercss()
 {
-  func("60", "#244addbb")
+  func("60", "#244add66")
 }
 function placernx()
 {
-  func("60", "#029999bb")
+  func("60", "#02999966")
 }
 
 const parentwidth = document.querySelector('#about').offsetWidth
@@ -71,8 +71,11 @@ function func(percentage, color)
   div.style.color = "white";
   div.innerHTML = "%" + percentage;
   div.style.textAlign = "center";
-  div.style.width = "0.001px";
+  div.style.width = width + "px";
+  div.style.pointerEvents = "none";
   document.getElementById("about").appendChild(div);
+  /*
+  //Animation
   div.animate({
     width: width + "px",
   }, {
@@ -80,6 +83,7 @@ function func(percentage, color)
     duration: 500,
     fill: 'forwards'
   } );
+  */
 }
 
 function remove()
