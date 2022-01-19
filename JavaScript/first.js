@@ -29,31 +29,31 @@ nx.addEventListener("mouseout", remove, false);
 
 function placersolidworks()
 {
-  func("85", "#e3181866")
+  func("85", "#e31818")
 }
 function placerfusion()
 {
-  func("90", "#d8852f66")
+  func("90", "#d8852f")
 }
 function placerc()
 {
-  func("60", "#00599d66")
+  func("60", "#00599d")
 }
 function placerpython()
 {
-  func("60", "#ffde5266")
+  func("60", "#ffde52")
 }
 function placerhtml()
 {
-  func("80", "#dc4a2566")
+  func("80", "#dc4a25")
 }
 function placercss()
 {
-  func("60", "#244add66")
+  func("60", "#244add")
 }
 function placernx()
 {
-  func("60", "#02999966")
+  func("60", "#029999")
 }
 
 const parentwidth = document.querySelector('#about').offsetWidth
@@ -64,13 +64,17 @@ function func(percentage, color)
   const parentheight = document.querySelector('#about').offsetHeight
   div.id = "temp";
   div.style.position = "absolute";
+  div.style.display = "flex";
   div.style.margin = "0";
   div.style.height = parentheight + "px";
   div.style.backgroundColor = color;
   div.style.borderRadius = "30px 0 0 30px";
   div.style.color = "white";
   div.innerHTML = "%" + percentage;
-  div.style.textAlign = "center";
+  div.style.fontSize = parentwidth + "%";
+  div.style.alignItems = "center";
+  div.style.justifyContent = "center";
+  div.style.opacity = "0.5";
   div.style.width = width + "px";
   div.style.pointerEvents = "none";
   document.getElementById("about").appendChild(div);

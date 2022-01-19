@@ -104,14 +104,12 @@ h3{
   list-style-type: none;
   padding: 0;
 }
-.about_text li{
-  padding: 10px;
-}
+
 .skilmark{
   font-weight: 700;
   padding: 0.8em;
   margin: -0.8em;
-  line-height: 15px;
+  line-height: 5px;
   transition: all .4s;
 }
 .skilmark:hover {
