@@ -37,7 +37,7 @@ h3{
 }
 
 
-/* Main #4C4452 */
+/* Main */
 #main{
   display:flex;
   background-color: #F7F8FF;
@@ -49,13 +49,19 @@ h3{
   align-items: center;
   background-position: center;
 }
+#main video{
+  position:absolute;
+  min-width: 100%;
+  min-height: 100%;
+}
 .maintext{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  color: black;
+  color: white;
+  z-index: 1;
 }
 .name {
   margin: 0;
