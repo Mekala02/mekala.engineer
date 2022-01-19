@@ -1,10 +1,16 @@
 var item = document.querySelectorAll(".skilmark");
-item[0].addEventListener("mouseover", func, false);
-item[0].addEventListener("mouseout", func1, false);
+
+for (let i = 0; i < item.length; i++) {
+  item[i].addEventListener("mouseover", func, false);
+  item[i].addEventListener("mouseout", func1, false);
+}
+
+
+
 
 let test = document.querySelector('#test');
 const parentwidth = document.querySelector('#about').offsetWidth
-let skill = "100"
+let skill = "80"
 let width = (skill * parentwidth / 100)
 function func()
 {
