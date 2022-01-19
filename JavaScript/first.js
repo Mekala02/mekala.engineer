@@ -7,10 +7,11 @@ let witdh = "50"
 function func()
 {
   var div = document.createElement("div");
+  const height = document.querySelector('#about').offsetHeight
   div.id = "temp";
   div.style.position = "absolute";
   div.style.margin = "0";
-  div.style.height = "100%";
+  div.style.height = height + "px";
   div.style.backgroundColor = "#4900c9bb";
   div.style.borderRadius = "30px 0 0 30px";
   div.style.color = "white";
