@@ -85,10 +85,6 @@ h3{
   background: #61626c;
   padding: 40;
 }
-#test{
-  height: 100%;
-  border-radius: 0 0 18px 18px;
-}
 .about_text{
   display: flex;
   flex-direction: column;

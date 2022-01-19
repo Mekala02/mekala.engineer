@@ -11,14 +11,17 @@ function func()
   div.id = "temp";
   div.style.position = "absolute";
   div.style.margin = "0";
-  div.style.width = witdh + "%";
   div.style.height = "100%";
   div.style.backgroundColor = "#4900c9bb";
   div.style.borderRadius = "30px 0 0 0";
   div.style.color = "white";
   div.innerHTML = "%" + witdh;
   div.style.textAlign = "center";
+  div.style.width = witdh + "%";
   document.getElementById("about").appendChild(div);
+  div.animate({
+    width: "300px", 
+  }, 1500 );
 }
 
 function func1()
