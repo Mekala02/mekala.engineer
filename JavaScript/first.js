@@ -6,34 +6,57 @@ var html = document.getElementById("html");
 var css = document.getElementById("css");
 var nx = document.getElementById("nx");
 
-solidworks.addEventListener("mouseover", placer, false);
+solidworks.addEventListener("mouseover", placersolidworks, false);
 solidworks.addEventListener("mouseout", remove, false);
 
-fusion.addEventListener("mouseover", placer, false);
+fusion.addEventListener("mouseover", placerfusion, false);
 fusion.addEventListener("mouseout", remove, false);
 
-c.addEventListener("mouseover", placer, false);
+c.addEventListener("mouseover", placerc, false);
 c.addEventListener("mouseout", remove, false);
 
-python.addEventListener("mouseover", placer, false);
+python.addEventListener("mouseover", placerpython, false);
 python.addEventListener("mouseout", remove, false);
 
-html.addEventListener("mouseover", placer, false);
+html.addEventListener("mouseover", placerhtml, false);
 html.addEventListener("mouseout", remove, false);
 
-css.addEventListener("mouseover", placer, false);
+css.addEventListener("mouseover", placercss, false);
 css.addEventListener("mouseout", remove, false);
 
-nx.addEventListener("mouseover", placer, false);
+nx.addEventListener("mouseover", placernx, false);
 nx.addEventListener("mouseout", remove, false);
 
-function placer()
+function placersolidworks()
 {
-  func("100", "#49ffc9bb")
+  func("85", "#e31818bb")
+}
+function placerfusion()
+{
+  func("90", "#d8852fbb")
+}
+function placerc()
+{
+  func("60", "#00599dbb")
+}
+function placerpython()
+{
+  func("60", "#ffde52bb")
+}
+function placerhtml()
+{
+  func("80", "#dc4a25bb")
+}
+function placercss()
+{
+  func("60", "#244addbb")
+}
+function placernx()
+{
+  func("60", "#029999bb")
 }
 
 const parentwidth = document.querySelector('#about').offsetWidth
-
 function func(percentage, color)
 {
   let width = (percentage * parentwidth / 100)
@@ -54,7 +77,7 @@ function func(percentage, color)
     width: width + "px",
   }, {
     // timing options
-    duration: 1000,
+    duration: 500,
     fill: 'forwards'
   } );
 }
