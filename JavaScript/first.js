@@ -77,10 +77,9 @@ if (mediaQuery.matches) {
     div.style.alignItems = "center";
     div.style.justifyContent = "center";
     div.style.opacity = "0.5";
-    div.style.width = width + "px";
+    div.style.width = "0.0001px";
     div.style.pointerEvents = "none";
     document.getElementById("about").appendChild(div);
-    /*
     //Animation
     div.animate({
       width: width + "px",
@@ -89,7 +88,6 @@ if (mediaQuery.matches) {
       duration: 500,
       fill: 'forwards'
     } );
-    */
   }
 
   function remove()
