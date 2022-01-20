@@ -36,38 +36,39 @@ h3{
     font-family: 'Permanent Marker', cursive;
 }
 
+#background video{
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
 /* Main */
 #main{
+  position: relative;
   display:flex;
-  background-color: #F7F8FF;
   height: 100%;
-  width: :100%;
-  background-repeat: no-repeat;
-  background-size: cover;
   justify-content: center;
-  align-items: center;
-  background-position: center;
-}
-#main video{
-  position:absolute;
-  min-width: 100%;
-  min-height: 100%;
+  /* Force to use GPU */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 .maintext{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 200px;
   flex-wrap: wrap;
   color: white;
-  z-index: 1;
 }
 .name {
   margin: 0;
   border: 0;
   text-align: center;
   font-size: 200%;
+  color: white;
 }
  .me{
    margin-left: 40px;
@@ -80,15 +81,17 @@ h3{
 #aboutcontainer{
   display: flex;
   justify-content: center;
-  background-color: #444655;
   padding-top: 200px;
   padding-bottom: 200px;
+  /* Force to use GPU */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 #about {
   display: flex;
   flex: auto;
   min-height: 100%;
-  background: #61626c;
+  background: #161616a8;
   padding: 40;
 }
 .about_text{
@@ -131,10 +134,9 @@ h3{
 
 /* Footer */
 footer{
-  padding-top: 50px;
-  margin-bottom: : 50px;
-  justify-content: center;
-  background-color: #F7F8FF;
+  /* Force to use GPU */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 .logo{
   color: white;
@@ -194,11 +196,6 @@ footer{
     max-width: 1200px;
     font-size: 120%;
   }
-  #myskills{
-    flex: wrap;
-    max-width: 1200px;
-    border-radius: 30px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -213,11 +210,6 @@ footer{
     border-radius: 30px;
     font-size: 120%;
   }
-  #myskills{
-    flex: wrap;
-    max-width: 1200px;
-    border-radius: 30px;
-  }
 }
 @media screen and (min-width: 1600px) {
   .name{
@@ -231,13 +223,6 @@ footer{
     max-width: 1800px;
     border-radius: 30px;
     font-size: 120%;
-    margin-right: 80px;
-    margin-left: 80px;
-  }
-  #myskills{
-    flex: wrap;
-    max-width: 1800px;
-    border-radius: 30px;
     margin-right: 80px;
     margin-left: 80px;
   }
