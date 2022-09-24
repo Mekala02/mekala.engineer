@@ -1,3 +1,3 @@
 This is my personal website's files.
 
-Website: mekala.xyz
+Link: mekala.xyz
