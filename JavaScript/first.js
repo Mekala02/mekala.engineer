@@ -4,62 +4,33 @@ if (mediaQuery.matches) {
   var fusion = document.getElementById("fusion");
   var c = document.getElementById("c");
   var python = document.getElementById("python");
+  var javasript = document.getElementById("javascript");
   var html = document.getElementById("html");
   var css = document.getElementById("css");
-  var nx = document.getElementById("nx");
 
-  solidworks.addEventListener("mouseover", placersolidworks, false);
-  solidworks.addEventListener("mouseout", remove, false);
+  solidworks.addEventListener("mouseover", function() {grow("85", "#e31818")});
+  solidworks.addEventListener("mouseout", remove);
 
-  fusion.addEventListener("mouseover", placerfusion, false);
-  fusion.addEventListener("mouseout", remove, false);
+  fusion.addEventListener("mouseover", function() {grow("90", "#d8852f")});
+  fusion.addEventListener("mouseout", remove);
 
-  c.addEventListener("mouseover", placerc, false);
-  c.addEventListener("mouseout", remove, false);
+  c.addEventListener("mouseover", function() {grow("60", "#00599d")});
+  c.addEventListener("mouseout", remove);
 
-  python.addEventListener("mouseover", placerpython, false);
-  python.addEventListener("mouseout", remove, false);
+  python.addEventListener("mouseover", function() {grow("75", "#ffde52")});
+  python.addEventListener("mouseout", remove);
 
-  html.addEventListener("mouseover", placerhtml, false);
-  html.addEventListener("mouseout", remove, false);
+  javasript.addEventListener("mouseover", function() {grow("65", "#ffde52")});
+  javasript.addEventListener("mouseout", remove);
 
-  css.addEventListener("mouseover", placercss, false);
-  css.addEventListener("mouseout", remove, false);
+  html.addEventListener("mouseover", function() {grow("90", "#dc4a25")});
+  html.addEventListener("mouseout", remove);
 
-  nx.addEventListener("mouseover", placernx, false);
-  nx.addEventListener("mouseout", remove, false);
-
-  function placersolidworks()
-  {
-    func("85", "#e31818")
-  }
-  function placerfusion()
-  {
-    func("90", "#d8852f")
-  }
-  function placerc()
-  {
-    func("60", "#00599d")
-  }
-  function placerpython()
-  {
-    func("60", "#ffde52")
-  }
-  function placerhtml()
-  {
-    func("80", "#dc4a25")
-  }
-  function placercss()
-  {
-    func("60", "#244add")
-  }
-  function placernx()
-  {
-    func("60", "#029999")
-  }
+  css.addEventListener("mouseover", function() {grow("90", "#244add")});
+  css.addEventListener("mouseout", remove);
 
   const parentwidth = document.querySelector('#about').offsetWidth
-  function func(percentage, color)
+  function grow(percentage, color)
   {
     let width = (percentage * parentwidth / 100)
     var div = document.createElement("div");
@@ -89,7 +60,6 @@ if (mediaQuery.matches) {
     }, {
       // timing options
       duration: 500,
-
       fill: 'forwards'
     } );
   }
