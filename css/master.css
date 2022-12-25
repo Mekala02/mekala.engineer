@@ -38,15 +38,13 @@ h3{
     font-family: 'Permanent Marker', cursive;
 }
 
-/* visited link */
-a:visited{
+a{
     color: #f5eaea;
 }
 
-/* mouse over link */
-a:hover {
+/* a:hover {
     color: #fae9e9;
-}
+} */
 
 /* Main #4C4452 */
 #main{
