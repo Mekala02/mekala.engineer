@@ -38,6 +38,16 @@ h3{
     font-family: 'Permanent Marker', cursive;
 }
 
+/* visited link */
+a:visited {
+  color: #f5eaea;
+}
+
+/* mouse over link */
+a:hover {
+  color: #fae9e9;
+}
+
 /* Main #4C4452 */
 #main{
   display:flex;
@@ -117,10 +127,13 @@ h3{
   font-size: 1.5em;
 }
 .apps{
-  color: #FFC069;
+  color: #fd7777;
 }
 .languages{
   color: #4da2ca;
+}
+.libraries{
+  color: #FFC069;
 }
 
 /* Footer */

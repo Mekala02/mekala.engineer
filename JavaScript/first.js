@@ -8,19 +8,24 @@ if (mediaQuery.matches) {
   var html = document.getElementById("html");
   var css = document.getElementById("css");
 
+  var tensorflow = document.getElementById("tensorflow");
+  var pytorch = document.getElementById("pytorch");
+  var docker = document.getElementById("docker");
+  var flask = document.getElementById("flask");
+
   solidworks.addEventListener("mouseover", function() {grow("85", "#e31818")});
   solidworks.addEventListener("mouseout", remove);
 
   fusion.addEventListener("mouseover", function() {grow("90", "#d8852f")});
   fusion.addEventListener("mouseout", remove);
 
-  c.addEventListener("mouseover", function() {grow("60", "#00599d")});
+  c.addEventListener("mouseover", function() {grow("70", "#00599d")});
   c.addEventListener("mouseout", remove);
 
   python.addEventListener("mouseover", function() {grow("75", "#ffde52")});
   python.addEventListener("mouseout", remove);
 
-  javasript.addEventListener("mouseover", function() {grow("65", "#ffde52")});
+  javasript.addEventListener("mouseover", function() {grow("70", "#ffde52")});
   javasript.addEventListener("mouseout", remove);
 
   html.addEventListener("mouseover", function() {grow("90", "#dc4a25")});
@@ -28,6 +33,18 @@ if (mediaQuery.matches) {
 
   css.addEventListener("mouseover", function() {grow("90", "#244add")});
   css.addEventListener("mouseout", remove);
+  
+  pytorch.addEventListener("mouseover", function() {grow("75", "#e31818")});
+  pytorch.addEventListener("mouseout", remove);
+
+  tensorflow.addEventListener("mouseover", function() {grow("65", "#d8852f")});
+  tensorflow.addEventListener("mouseout", remove);
+
+  docker.addEventListener("mouseover", function() {grow("70", "#00599d")});
+  docker.addEventListener("mouseout", remove);
+
+  flask.addEventListener("mouseover", function() {grow("60", "#ffde52")});
+  flask.addEventListener("mouseout", remove);
 
   const parentwidth = document.querySelector('#about').offsetWidth
   function grow(percentage, color)
