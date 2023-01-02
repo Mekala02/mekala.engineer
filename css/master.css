@@ -80,40 +80,67 @@ a{
 
 
 /* About  */
-#aboutcontainer{
+.page_container{
+    background-color: #353538;
     display: flex;
     justify-content: center;
-    background-color: #444655;
+    align-items: center;
     padding-top: 200px;
     padding-bottom: 200px;
 }
-#about {
+.content_area {
     display: flex;
+    justify-content: space-between;
     flex: auto;
     min-height: 100%;
-    background: #61626c;
+    background: #505050;
     padding: 40;
 }
-.about_text{
+
+.odd_container{
+    background-color: #353538;
+    justify-content: center;
+}
+
+.even_container{
+    background-color: #f7f8ff;
+    justify-content: center;
+    min-height: 1200px;
+}
+
+.content_text{
     display: flex;
     flex-direction: column;
     color: #FAF8FF;
     font-size: 113%;
     padding: 25px;
 }
-.about_text p{
+.project_title{
+    margin: 0px;
+}
+.content_text p{
     padding-left: 0px;
 }
-.about_text h3{
+.content_text h3{
     margin-top: 30;
     margin-bottom: 20px;
 }
-.about_text ul{
+.content_text ul{
     margin-bottom: 15px;
     list-style-type: none;
     padding: 0;
 }
-
+.project_title h2{
+    margin: 0px;
+}
+.project_title i{
+    font-size: 0.7em;
+    margin: 0px;
+}
+.project_image{
+    width: 600px;
+    height: auto;
+}
 .skilmark{
     font-weight: 700;
     padding: 0.8em;
@@ -192,7 +219,7 @@ footer{
     .me{
         font-size: 150%;
     }
-    #aboutcontainer{
+    .page_container{
         padding-top: 50px;
         padding-bottom: 50px;
     }
@@ -200,7 +227,7 @@ footer{
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    #about{
+    .content_area{
         max-width: 1200px;
         font-size: 120%;
     }
@@ -218,7 +245,7 @@ footer{
     .me{
         font-size: 150%;
     }
-    #about{
+    .content_area{
         max-width: 1200px;
         border-radius: 30px;
         font-size: 120%;
@@ -236,7 +263,7 @@ footer{
     .me{
         font-size: 170%;
     }
-    #about{
+    .content_area{
         flex: wrap;
         max-width: 1800px;
         border-radius: 30px;
