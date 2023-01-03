@@ -103,47 +103,46 @@ a
     justify-content: center
     min-height: 1200px
 
-.odd_area
-
-.content_text
-    display: flex
-    flex-direction: column
-    color: #FAF8FF
-    font-size: 113%
-    padding: 25px
-    .project_title
-        margin: 0px
-        h2
-            margin: 0px
-        i
-            font-size: 0.7em
-            margin: 0px
-    p
-        padding-left: 0px
-    h3
-        margin-top: 30
-        margin-bottom: 20px
-    .project_description
+.content_area
+    overflow: auto
+    .content_text
         display: flex
-        height: 100%
-        align-items: center
-        ul
+        flex-direction: column
+        color: #FAF8FF
+        font-size: 113%
+        padding: 25px
+        .project_title
+            margin: 0px
+            h2
+                margin: 0px
+            i
+                font-size: 0.7em
+                margin: 0px
+        p
+            padding-left: 0px
+        h3
+            margin-top: 30
+            margin-bottom: 20px
+        .project_description
+            display: flex
+            height: 100%
             align-items: center
-            margin-bottom: 15px
-            list-style-type: none
-            padding: 0
+            ul
+                align-items: center
+                margin-bottom: 15px
+                list-style-type: none
+                padding: 0
 .project_image_container
+    display: flex
+    min-height: 100%
+    max-width: 50%
+    max-height: 90vh
     align-items: center
     justify-content: center
-    max-width: 50%
-    max-height: 80%
-    height: 100%
     .project_image
-        display: flex
-        align-items: center
-        justify-content: center
+        max-width: 600px
         max-width: 100%
-        width: 600px
+        max-height: 100%
         padding: 30px
 
 /* Footer */
