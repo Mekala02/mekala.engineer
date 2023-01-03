@@ -83,7 +83,7 @@ a{
 #aboutcontainer{
     display: flex;
     justify-content: center;
-    background-color: #444655;
+    background-color: #353538;
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -91,7 +91,7 @@ a{
     display: flex;
     flex: auto;
     min-height: 100%;
-    background: #61626c;
+    background: #505050;
     padding: 40;
 }
 .about_text{
