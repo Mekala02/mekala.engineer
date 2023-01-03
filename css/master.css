@@ -168,13 +168,12 @@ a {
 .project_image_container {
   display: flex;
   min-height: 100%;
-  max-width: 50%;
+  max-width: min(50%, 650px);
   max-height: 90vh;
   align-items: center;
   justify-content: center;
 }
 .project_image_container .project_image {
-  max-width: 600px;
   max-width: 100%;
   max-height: 100%;
   padding: 30px;
