@@ -20,19 +20,15 @@ body, html
     font-family: 'Lexend', serif
     font-weight: 300
     overflow-x: hidden
-
 h1
     font-family: 'Permanent Marker', cursive
     font-weight: 400
-
 h2
     font-weight: 350
     font-family: 'Permanent Marker', cursive
-
 h3
     font-weight: 300
     font-family: 'Permanent Marker', cursive
-
 a
     color: #f5eaea
 
@@ -107,6 +103,8 @@ a
     justify-content: center
     min-height: 1200px
 
+.odd_area
+
 .content_text
     display: flex
     flex-direction: column
@@ -142,9 +140,6 @@ a
         max-width: 100%
         width: 600px
         padding: 30px
-
-
-
 
 /* Footer */
 footer
@@ -190,10 +185,12 @@ footer
 
 
 @media (max-width: 1199px) 
-    .name
-        font-size: 300%
-    .me
-        font-size: 150%
+    #main
+        .maintext
+            .name
+                font-size: 300%
+            .me
+                font-size: 150%
     .page_container
         padding-top: 50px
         padding-bottom: 50px
@@ -207,14 +204,14 @@ footer
         flex: wrap
         max-width: 1200px
         border-radius: 30px
-    
 
-
-@media (min-width: 1200px) 
-    .name
-        font-size: 300%
-    .me
-        font-size: 150%
+@media (min-width: 1200px)
+    #main
+        .maintext
+            .name
+                font-size: 300%
+            .me
+                font-size: 150%
     .content_area
         max-width: 1200px
         border-radius: 30px
@@ -224,12 +221,13 @@ footer
         max-width: 1200px
         border-radius: 30px
     
-
-@media (min-width: 1600px) 
-    .name
-        font-size: 400%
-    .me
-        font-size: 170%
+@media (min-width: 1600px)
+    #main
+        .maintext
+            .name
+                font-size: 400%
+            .me
+                font-size: 170%
     .content_area
         flex: wrap
         max-width: 1800px

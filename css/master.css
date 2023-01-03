@@ -224,10 +224,10 @@ footer .designedby {
 }
 
 @media (max-width: 1199px) {
-  .name {
+  #main .maintext .name {
     font-size: 300%;
   }
-  .me {
+  #main .maintext .me {
     font-size: 150%;
   }
   .page_container {
@@ -249,10 +249,10 @@ footer .designedby {
   }
 }
 @media (min-width: 1200px) {
-  .name {
+  #main .maintext .name {
     font-size: 300%;
   }
-  .me {
+  #main .maintext .me {
     font-size: 150%;
   }
   .content_area {
@@ -267,10 +267,10 @@ footer .designedby {
   }
 }
 @media (min-width: 1600px) {
-  .name {
+  #main .maintext .name {
     font-size: 400%;
   }
-  .me {
+  #main .maintext .me {
     font-size: 170%;
   }
   .content_area {
