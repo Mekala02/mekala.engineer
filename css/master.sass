@@ -2,8 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap')
 
-$with1: 1199px
-$with2: 1600px
+$mobile_portrain_w: 420px
+$mobile_landscape_w: 800px
+$tablet_w: 1199px
+$pc_w: 1600px
+$big_screen_w: 1601px
 
 html
     box-sizing: border-box
@@ -57,17 +60,17 @@ a
             border: 0
             text-align: center
             font-size: 200%
-            @media (max-width: $with1) 
+            @media (max-width: $tablet_w) 
                 font-size: 300%
-            @media (min-width: $with2)
+            @media (min-width: $pc_w)
                 font-size: 400%
         .me
             margin-left: 40px
             margin-right: 40px
             font-size: 120%
-            @media (max-width: $with1) 
+            @media (max-width: $tablet_w) 
                 font-size: 150%
-            @media (min-width: $with2)
+            @media (min-width: $pc_w)
                 font-size: 170%
  
 /* About  */
@@ -78,7 +81,7 @@ a
     align-items: center
     padding-top: 200px
     padding-bottom: 200px
-    @media (max-width: $with1)
+    @media (max-width: $tablet_w)
         padding-top: 50px
         padding-bottom: 50px
 
@@ -89,14 +92,17 @@ a
     min-height: 100%
     background: #505050
     padding: 40
-    overflow: auto
-    @media (max-width: $with1) 
+    overflow: hidden
+    @media (max-width: $mobile_landscape_w)
         flex-direction: column
-    @media (min-width: $with1+1px)
+        justify-content: center
+        align-content: center
+        align-items: center
+    @media (max-width: $pc_w - 1px)
         max-width: 1200px
         border-radius: 30px
         font-size: 120%
-    @media (min-width: $with2)
+    @media (min-width: $pc_w)
         flex: wrap
         max-width: 1800px
         border-radius: 30px
@@ -109,6 +115,11 @@ a
         color: #FAF8FF
         font-size: 113%
         padding: 25px
+        p
+            padding-left: 0px
+        h3
+            margin-top: 30
+            margin-bottom: 20px
         .project_title
             margin: 0px
             h2
@@ -116,11 +127,6 @@ a
             i
                 font-size: 0.7em
                 margin: 0px
-        p
-            padding-left: 0px
-        h3
-            margin-top: 30
-            margin-bottom: 20px
         .project_description
             display: flex
             height: 100%
@@ -130,6 +136,25 @@ a
                 margin-bottom: 15px
                 list-style-type: none
                 padding: 0
+    .project_image_container
+        display: flex
+        min-height: 100%
+        max-width: min(50%, 650px)
+        max-height: 90vh
+        align-items: center
+        justify-content: center
+        @media (max-width: $mobile_portrain_w)
+            max-width: none
+            width: 100%
+            max-height: 100%
+        @media (max-width: $mobile_landscape_w)
+            max-width: none
+            width: 70%
+            max-height: 80%
+        .project_image
+            max-width: 100%
+            max-height: 100%
+            padding: 30px
 
 .skilmark
     font-weight: 700
@@ -157,17 +182,6 @@ a
     justify-content: center
     min-height: 1200px
 
-.project_image_container
-    display: flex
-    min-height: 100%
-    max-width: min(50%, 650px)
-    max-height: 90vh
-    align-items: center
-    justify-content: center
-    .project_image
-        max-width: 100%
-        max-height: 100%
-        padding: 30px
 
 /* Footer */
 footer
