@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap')
 
+$with1: 1199px
+$with2: 1600px
+
 html
     box-sizing: border-box
 
@@ -54,10 +57,18 @@ a
             border: 0
             text-align: center
             font-size: 200%
+            @media (max-width: $with1) 
+                font-size: 300%
+            @media (min-width: $with2)
+                font-size: 400%
         .me
             margin-left: 40px
             margin-right: 40px
             font-size: 120%
+            @media (max-width: $with1) 
+                font-size: 150%
+            @media (min-width: $with2)
+                font-size: 170%
  
 /* About  */
 .page_container
@@ -67,6 +78,9 @@ a
     align-items: center
     padding-top: 200px
     padding-bottom: 200px
+    @media (max-width: $with1)
+        padding-top: 50px
+        padding-bottom: 50px
 
 .content_area 
     display: flex
@@ -75,35 +89,20 @@ a
     min-height: 100%
     background: #505050
     padding: 40
-
-.skilmark
-    font-weight: 700
-    padding: 0.8em
-    margin: -0.8em
-    line-height: 5px
-    transition: all .4s
-    &:hover
-        font-size: 1.5em
-.apps
-    color: #fd7777
-
-.languages
-    color: #4da2ca
-
-.libraries
-    color: #FFC069
-
-.odd_container
-    background-color: #353538
-    justify-content: center
-
-.even_container
-    background-color: #f7f8ff
-    justify-content: center
-    min-height: 1200px
-
-.content_area
     overflow: auto
+    @media (max-width: $with1) 
+        flex-direction: column
+    @media (min-width: $with1+1px)
+        max-width: 1200px
+        border-radius: 30px
+        font-size: 120%
+    @media (min-width: $with2)
+        flex: wrap
+        max-width: 1800px
+        border-radius: 30px
+        font-size: 120%
+        margin-right: 80px
+        margin-left: 80px
     .content_text
         display: flex
         flex-direction: column
@@ -131,6 +130,33 @@ a
                 margin-bottom: 15px
                 list-style-type: none
                 padding: 0
+
+.skilmark
+    font-weight: 700
+    padding: 0.8em
+    margin: -0.8em
+    line-height: 5px
+    transition: all .4s
+    &:hover
+        font-size: 1.5em
+.apps
+    color: #fd7777
+
+.languages
+    color: #4da2ca
+
+.libraries
+    color: #FFC069
+
+.odd_container
+    background-color: #353538
+    justify-content: center
+
+.even_container
+    background-color: #f7f8ff
+    justify-content: center
+    min-height: 1200px
+
 .project_image_container
     display: flex
     min-height: 100%
@@ -183,61 +209,3 @@ footer
         padding-bottom: 50px
         color: #C5C5C5
         margin-bottom: 0px
-
-@media (max-width: 1199px) 
-    #main
-        .maintext
-            .name
-                font-size: 300%
-            .me
-                font-size: 150%
-    .page_container
-        padding-top: 50px
-        padding-bottom: 50px
-    .skillscontainer
-        padding-top: 100px
-        padding-bottom: 100px
-    .content_area
-        max-width: 1200px
-        font-size: 120%
-    #myskills
-        flex: wrap
-        max-width: 1200px
-        border-radius: 30px
-
-@media (min-width: 1200px)
-    #main
-        .maintext
-            .name
-                font-size: 300%
-            .me
-                font-size: 150%
-    .content_area
-        max-width: 1200px
-        border-radius: 30px
-        font-size: 120%
-    #myskills
-        flex: wrap
-        max-width: 1200px
-        border-radius: 30px
-    
-@media (min-width: 1600px)
-    #main
-        .maintext
-            .name
-                font-size: 400%
-            .me
-                font-size: 170%
-    .content_area
-        flex: wrap
-        max-width: 1800px
-        border-radius: 30px
-        font-size: 120%
-        margin-right: 80px
-        margin-left: 80px
-    #myskills
-        flex: wrap
-        max-width: 1800px
-        border-radius: 30px
-        margin-right: 80px
-        margin-left: 80px
