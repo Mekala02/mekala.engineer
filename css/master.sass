@@ -5,8 +5,9 @@
 $mobile_portrain_w: 420px
 $mobile_landscape_w: 800px
 $tablet_w: 1199px
-$pc_w: 1600px
+$pc_w: 1200px
 $big_screen_w: 1601px
+$color_white: #f5f5f7
 
 html
     box-sizing: border-box
@@ -39,7 +40,7 @@ a
 
 #main
     display: flex
-    background-color: #F7F8FF
+    background-color: $color_white
     height: 100%
     width: 100%
     background-repeat: no-repeat
@@ -75,7 +76,7 @@ a
  
 /* About  */
 .page_container
-    background-color: #353538
+    background-color: #1f1f1f
     display: flex
     justify-content: center
     align-items: center
@@ -90,7 +91,7 @@ a
     justify-content: space-between
     flex: auto
     min-height: 100%
-    background: #505050
+    background: #2e2e2efc
     padding: 40
     overflow: hidden
     @media (max-width: $mobile_landscape_w)
@@ -121,13 +122,22 @@ a
         h3
             margin-top: 30
             margin-bottom: 20px
+        a
+            font-size: 20px
         .project_title
+            display: flex
+            flex-direction: column
             margin: 0px
             h2
                 margin: 0px
             i
                 font-size: 0.7em
                 margin: 0px
+            u
+                text-decoration-thickness: 2px
+                text-underline-offset: 10px
+            .date
+                color: #ffc069
         .project_description
             display: flex
             height: 100%
@@ -175,11 +185,10 @@ a
     color: #FFC069
 
 .odd_container
-    background-color: #353538
     justify-content: center
 
 .even_container
-    background-color: #f7f8ff
+    background-color: $color_white
     justify-content: center
     @media (max-width: $pc_w)
         padding-top: 0px
