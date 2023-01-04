@@ -60,7 +60,7 @@ a
             border: 0
             text-align: center
             font-size: 200%
-            @media (max-width: $tablet_w) 
+            @media (max-width: $tablet_w)
                 font-size: 300%
             @media (min-width: $pc_w)
                 font-size: 400%
@@ -68,7 +68,7 @@ a
             margin-left: 40px
             margin-right: 40px
             font-size: 120%
-            @media (max-width: $tablet_w) 
+            @media (max-width: $tablet_w)
                 font-size: 150%
             @media (min-width: $pc_w)
                 font-size: 170%
@@ -98,7 +98,8 @@ a
         justify-content: center
         align-content: center
         align-items: center
-    @media (max-width: $pc_w - 1px)
+        border-radius: none
+    @media (min-width: $pc_w - 1px)
         max-width: 1200px
         border-radius: 30px
         font-size: 120%
@@ -147,7 +148,7 @@ a
             max-width: none
             width: 100%
             max-height: 100%
-        @media (max-width: $mobile_landscape_w)
+        @media (min-width: $mobile_portrain_w) and (max-width: $mobile_landscape_w)
             max-width: none
             width: 70%
             max-height: 80%
@@ -180,8 +181,9 @@ a
 .even_container
     background-color: #f7f8ff
     justify-content: center
-    min-height: 1200px
-
+    @media (max-width: $pc_w)
+        padding-top: 0px
+        padding-bottom: 0px
 
 /* Footer */
 footer

@@ -123,9 +123,10 @@ a {
     justify-content: center;
     align-content: center;
     align-items: center;
+    border-radius: none;
   }
 }
-@media (max-width: 1599px) {
+@media (min-width: 1599px) {
   .content_area {
     max-width: 1200px;
     border-radius: 30px;
@@ -192,7 +193,7 @@ a {
     max-height: 100%;
   }
 }
-@media (max-width: 800px) {
+@media (min-width: 420px) and (max-width: 800px) {
   .content_area .project_image_container {
     max-width: none;
     width: 70%;
@@ -236,7 +237,12 @@ a {
 .even_container {
   background-color: #f7f8ff;
   justify-content: center;
-  min-height: 1200px;
+}
+@media (max-width: 1600px) {
+  .even_container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 /* Footer */
