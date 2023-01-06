@@ -4,8 +4,8 @@
         <title>Mekala</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="This site is Mekala's practice area">
-        <link rel="stylesheet" href="css/master.css">
+        <meta name="description" content="My personal website">
+        <link rel="stylesheet" href="css/master.css?v=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
@@ -17,9 +17,9 @@
             </div>
         </section>
 
-        <div id="aboutcontainer">
-            <section id="about">
-                <div class="about_text">
+        <div class="page_container">
+            <section class="content_area" id="about">
+                <div class="content_text">
                     <h2>About Me</h2>
                     <p>Reliable and hardworking student. Always seeking for new skills and self-development.</p>
                     <h3>2017-2021</h3>
@@ -53,12 +53,156 @@
                     </ul>
                     <h3>Future objectives</h3>
                     <ul>
-                        <li>Graduate with dual degrees in Mechatronic Engineering and Artificial Intelligence Engineering.</li>
-                        <li>Launch a company for develop autonomous CAD design software.</li>
+                        <li>Developing a fully automatic CAD design software.</li>
                     </ul>
                 </div>
             </section>
         </div>
+
+        <section id="projects">
+            <div class="page_container even_container" id="car_container">
+                <section class="content_area" id="car_area">
+                    <div class="content_text project_text">
+                        <div class="project_title">
+                            <u><h2>Self Driving Platform</h2></u>
+                            <b><i>Low-cost autonomous driving platform</i></b>
+                            <b class="date"><i>2022 – Present</i></b>
+                        </div>
+                        <div class="project_description">
+                            <p>
+                                Developed an autonomous driving car based on the End-to-End approach.
+                                It is able to drive autonomously using only cameras, mimicking human behavior.
+                                In an effort to lower costs, tried to use the least amount of sensors possible and focused more on software development.
+                                The car is also fully open sourced.
+                                For more info check out the <a href="https://github.com/Mekala02/e2e-driver" target="_blank"> <i>Project Page.</i></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project_image_container">
+                        <img src="images/car_1.png" class="project_image">
+                    </div>
+                </section>
+            </div>
+
+            <div class="page_container odd_container" id="printer_container">
+                <section class="content_area" id="printer_area">
+                    <div id="printer_text" class="content_text project_text">
+                        <div class="project_title">
+                            <u><h2>Delta 3D Printer</h2></u>
+                            <b><i>Fast and reliable fdm printer</i></b>
+                            <b class="date"><i>2018 – 2021</i></b>
+                        </div>
+                        <div class="project_description">
+                            <p>
+                                Designed a 3D printer according to my specific needs.
+                                It has a large printing size of 460 mm ø x 450 mm h, and is constructed entirely of metal.
+                                The printer features linear rails on all axis, as well as lightweight carbon fiber arms and an effector.
+                                It also has a bed air cooling system and a quickly changeable toolhead.
+                                The toolhead can be equipped with a laser for cutting and engraving. Overall, the printer is easy to fix and maintain.
+                            </p>
+                        </div> 
+                    </div>
+                    <div class="project_image_container">
+                        <img src="images/printer.png" class="project_image">
+                    </div>
+                </section>
+            </div>
+
+            <div class="page_container even_container" id="drone_container">
+                <section class="content_area" id="drone_area">
+                    <div class="content_text project_text">
+                        <div class="project_title">
+                            <u><h2>Drone chassis (Generative Design)</h2></u>
+                            <b><i>Light weight and sturdy drone frame</i></b>
+                            <b class="date"><i>2020</i></b>
+                        </div>
+                        <div class="project_description">
+                            <p>
+                                Designed and built a very lightweight drone frame, with a dry weight of only 36g.
+                                Despite its light weight, the frame is strong and easy to print.
+                                It also includes motor and motor wire protection, and can be modified to accommodate specific flight controllers,
+                                batteries, and FPV equipment.
+                                For more info check out the <a href="https://www.thingiverse.com/thing:4627037" target="_blank"> <i>Project Page.</i></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project_image_container drone_image">
+                        <img src="images/drone_6.png" class="project_image">
+                    </div>
+                </section>
+            </div>
+
+            <div class="page_container odd_container" id="ffb_container">
+                <section class="content_area" id="ffb_area">
+                    <div class="content_text project_text">
+                        <div class="project_title">
+                            <u><h2>FFB Wheel</h2></u>
+                            <b><i>Force Feedback Sim Racing Wheel</i></b>
+                            <b class="date"><i>2020</i></b>
+                        </div>
+                        <div class="project_description">
+                            <p>
+                                Designed and built a low cost sim racing wheel that provides a realistic driving experience.
+                                The wheel is powered by two onboard dc motors that provide a high amount of torque, and uses a belt for smooth and responsive power delivery.
+                                Despite its small and compact form factor, the sim racing wheel is able to simulate the feeling of driving a real car.
+                                Overall, it is a cost-effective and immersive way to experience the thrill of racing.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project_image_container">
+                        <img src="images/ffb_1.png" class="project_image">
+                    </div>
+                </section>
+            </div>
+
+            <div class="page_container even_container" id="fetih_container">
+                <section class="content_area" id="fetih_area">
+                    <div class="content_text project_text">
+                        <div class="project_title">
+                            <u><h2>Autonomous Boat</h2></u>
+                            <b><i>Unmanned Surface Vehicle</i></b>
+                            <b class="date"><i>2019</i></b>
+                            <!-- <b class="date"><i>2019</i></b> -->
+                        </div>
+                        <div class="project_description">
+                            <p>
+                                The robot for the Teknofest 2019 Robot Competition is built and programmed by a team.
+                                It is an autonomous boat that is capable of transporting other
+                                boats to a predetermined location, using camera and lidar sensors for
+                                autonomous navigation and piloting.
+                                The boat is also able to distinguish between allied and enemy boats, as well as identify targets.
+                                It possesses an onboard gun system, enabling it to shoot at said targets.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project_image_container">
+                        <img src="images/fetih_2.png" class="project_image">
+                    </div>
+                </section>
+            </div>
+
+            <div class="page_container odd_container" id="yt_container">
+                <section class="content_area" id="yt_area">
+                    <div class="content_text project_text">
+                        <div class="project_title">
+                            <u><h2>Robot Car</h2></u>
+                            <b><i>Autonomous car</i></b>
+                            <b class="date"><i>2017</i></b>
+                        </div>
+                        <div class="project_description">
+                            <p>
+                                Built and programmed a robot for the International MoNE Robot Competition with my team.
+                                The competition involved collecting small colored eggs and bringing them to designated collection fields,
+                                and scores were given based on the number of eggs collected within a specific time frame. The robots raced against each other in a designated area.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project_image_container">
+                        <img src="images/yt_1.png" class="project_image">
+                    </div>
+                </section>
+            </div>
+        </section>
 
         <footer>
             <ul style="list-style-type: none;" class="social">
