@@ -76,7 +76,7 @@ a
  
 /* About  */
 .page_container
-    background-color: #1f1f1f
+    background-color: #353538
     display: flex
     justify-content: center
     align-items: center
@@ -111,7 +111,13 @@ a
         font-size: 120%
         margin-right: 80px
         margin-left: 80px
-    .content_text
+    .project_text
+        @media (min-width: $mobile_landscape_w)
+            max-width: 50%
+    #printer_text
+        @media (min-width: $mobile_landscape_w)
+            max-width: 40%
+    .content_text, .project_text
         display: flex
         flex-direction: column
         color: #FAF8FF
@@ -142,7 +148,7 @@ a
             display: flex
             height: 100%
             align-items: center
-            ul
+            p
                 align-items: center
                 margin-bottom: 15px
                 list-style-type: none

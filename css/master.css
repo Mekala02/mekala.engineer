@@ -94,7 +94,7 @@ a {
 
 /* About  */
 .page_container {
-  background-color: #1f1f1f;
+  background-color: #353538;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,48 +143,58 @@ a {
     margin-left: 80px;
   }
 }
-.content_area .content_text {
+@media (min-width: 800px) {
+  .content_area .project_text {
+    max-width: 50%;
+  }
+}
+@media (min-width: 800px) {
+  .content_area #printer_text {
+    max-width: 40%;
+  }
+}
+.content_area .content_text, .content_area .project_text {
   display: flex;
   flex-direction: column;
   color: #FAF8FF;
   font-size: 113%;
   padding: 25px;
 }
-.content_area .content_text p {
+.content_area .content_text p, .content_area .project_text p {
   padding-left: 0px;
 }
-.content_area .content_text h3 {
+.content_area .content_text h3, .content_area .project_text h3 {
   margin-top: 30;
   margin-bottom: 20px;
 }
-.content_area .content_text a {
+.content_area .content_text a, .content_area .project_text a {
   font-size: 20px;
 }
-.content_area .content_text .project_title {
+.content_area .content_text .project_title, .content_area .project_text .project_title {
   display: flex;
   flex-direction: column;
   margin: 0px;
 }
-.content_area .content_text .project_title h2 {
+.content_area .content_text .project_title h2, .content_area .project_text .project_title h2 {
   margin: 0px;
 }
-.content_area .content_text .project_title i {
+.content_area .content_text .project_title i, .content_area .project_text .project_title i {
   font-size: 0.7em;
   margin: 0px;
 }
-.content_area .content_text .project_title u {
+.content_area .content_text .project_title u, .content_area .project_text .project_title u {
   text-decoration-thickness: 2px;
   text-underline-offset: 10px;
 }
-.content_area .content_text .project_title .date {
+.content_area .content_text .project_title .date, .content_area .project_text .project_title .date {
   color: #ffc069;
 }
-.content_area .content_text .project_description {
+.content_area .content_text .project_description, .content_area .project_text .project_description {
   display: flex;
   height: 100%;
   align-items: center;
 }
-.content_area .content_text .project_description ul {
+.content_area .content_text .project_description p, .content_area .project_text .project_description p {
   align-items: center;
   margin-bottom: 15px;
   list-style-type: none;
