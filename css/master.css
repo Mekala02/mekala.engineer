@@ -93,19 +93,29 @@ a {
 }
 
 /* About  */
-#aboutcontainer{
-    display: flex;
-    justify-content: center;
-    background-color: #353538;
-    padding-top: 200px;
-    padding-bottom: 200px;
+.page_container {
+  background-color: #353538;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
-#about {
-    display: flex;
-    flex: auto;
-    min-height: 100%;
-    background: #61626c;
-    padding: 40;
+@media (max-width: 1199px) {
+  .page_container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.content_area {
+  display: flex;
+  justify-content: space-between;
+  flex: auto;
+  min-height: 100%;
+  background: rgba(46, 46, 46, 0.9882352941);
+  padding: 40;
+  overflow: hidden;
 }
 @media (max-width: 800px) {
   .content_area {
