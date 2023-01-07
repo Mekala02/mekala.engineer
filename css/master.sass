@@ -117,9 +117,15 @@ a
             &:hover
                 border-bottom-width: 7px
                 border-right-width: 7px
-            @media (max-width: $tablet_w)
+            @media (max-width: $mobile_landscape_w)
+                height: 5vw
+                width: 5vw
+            @media (min-width: $mobile_landscape_w) and (max-width: $tablet_w)
                 height: 4vw
                 width: 4vw
+            @media (min-width: $tablet_w)
+                height: 1.5vw
+                width: 1.5vw
 
 .content_area 
     display: flex

@@ -147,10 +147,22 @@ a {
   border-bottom-width: 7px;
   border-right-width: 7px;
 }
-@media (max-width: 1199px) {
+@media (max-width: 800px) {
+  #about_container #scroll_for_projects .arrow {
+    height: 5vw;
+    width: 5vw;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
   #about_container #scroll_for_projects .arrow {
     height: 4vw;
     width: 4vw;
+  }
+}
+@media (min-width: 1199px) {
+  #about_container #scroll_for_projects .arrow {
+    height: 1.5vw;
+    width: 1.5vw;
   }
 }
 

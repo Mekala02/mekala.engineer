@@ -88,3 +88,8 @@ if (mediaQuery.matches) {
         temp.remove();
     }
 }
+
+// For Automatic Scrolling
+document.getElementById("anchorElement").addEventListener("click", e => {
+    document.getElementById("car_container").scrollIntoView(true);
+})
