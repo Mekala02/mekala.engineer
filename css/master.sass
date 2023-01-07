@@ -11,6 +11,7 @@ $color_white: #f5f5f7
 
 html
     box-sizing: border-box
+    scroll-behavior: smooth
 
 
 *, *:before, *:after
@@ -78,6 +79,7 @@ a
 .page_container
     background-color: #353538
     display: flex
+    flex-direction: column
     justify-content: center
     align-items: center
     padding-top: 200px
@@ -85,12 +87,46 @@ a
     @media (max-width: $tablet_w)
         padding-top: 50px
         padding-bottom: 50px
+        
+#about_container
+    padding-bottom: 0px
+    #scroll_for_projects
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        position: relative
+        color: white
+        padding-top: 70px
+        bottom: 0px
+        padding-bottom: 80px
+        @media (max-width: $tablet_w)
+            padding-top: 50px
+            padding-bottom: 50px
+        p
+            margin: 5px
+        .arrow
+            box-sizing: border-box
+            height: 1.5vw
+            width: 1.5vw
+            border-style: solid
+            border-color: white
+            border-width: 0px 4px 4px 0px
+            transform: rotate(45deg)
+            transition: border-width 150ms ease-in-out
+            &:hover
+                border-bottom-width: 7px
+                border-right-width: 7px
+            @media (max-width: $tablet_w)
+                height: 4vw
+                width: 4vw
 
 .content_area 
     display: flex
     justify-content: space-between
     flex: auto
     min-height: 100%
+    min-width: 70%
     background: #2e2e2efc
     padding: 40
     overflow: hidden
