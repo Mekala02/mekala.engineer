@@ -22,16 +22,16 @@ if (mediaQuery.matches) {
     c.addEventListener("mouseover", function() {grow("70", "#00599d")});
     c.addEventListener("mouseout", remove);
 
-    python.addEventListener("mouseover", function() {grow("75", "#ffde52")});
+    python.addEventListener("mouseover", function() {grow("80", "#ffde52")});
     python.addEventListener("mouseout", remove);
 
-    javasript.addEventListener("mouseover", function() {grow("70", "#ffde52")});
+    javasript.addEventListener("mouseover", function() {grow("60", "#ffde52")});
     javasript.addEventListener("mouseout", remove);
 
     html.addEventListener("mouseover", function() {grow("90", "#dc4a25")});
     html.addEventListener("mouseout", remove);
 
-    css.addEventListener("mouseover", function() {grow("90", "#244add")});
+    css.addEventListener("mouseover", function() {grow("85", "#244add")});
     css.addEventListener("mouseout", remove);
 
     pytorch.addEventListener("mouseover", function() {grow("75", "#e31818")});
