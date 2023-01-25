@@ -97,3 +97,57 @@ if (mediaQuery.matches) {
         temp.remove();
     }
 }
+
+const projects_slide_counts = [[2], [2], [2], [2], [2], [2]];
+const max_image_sizes = [];
+
+function response_to_resize(){
+    for (var p = 0; p < projects_slide_counts.length; p++){
+        max_image_sizes[p] = {height: null, width: null}
+        width = 0
+        height = 0
+        for (var i = 0; i < projects_slide_counts[p]; i++){
+            id = "p" + p.toString() + "i" + i
+            width = Math.max(width, document.getElementById(id).naturalWidth)
+            height = Math.max(height, document.getElementById(id).naturalHeight)
+        }
+        if (height < document.documentElement.clientHeight)
+            max_image_sizes[p]["height"] = height
+        if (width < document.documentElement.clientWidth)
+            max_image_sizes[p]["width"] = width
+    }
+}
+console.log(max_image_sizes)
+window.addEventListener("resize", response_to_resize)
+response_to_resize()
+
+for (var p = 0; p < projects_slide_counts.length; p++){
+    try {
+        document.getElementById("image_container_" + p).style.width = max_image_sizes[p]["width"] + "px"
+        document.getElementById("image_container_" + p).style.height = max_image_sizes[p]["height"] + "px"
+    } catch (error) {
+        continue
+    }
+}
+
+function change_slide(project, button){
+    for (var i = 0; i < projects_slide_counts[project]; i++){
+        if (i==button)
+            continue
+        id = "p" + project.toString() + "i" + i.toString()
+        document.getElementById(id).style.display = "none"
+    }
+    id = "p" + project.toString() + "i" + button.toString()
+    document.getElementById(id).style.display = "flex"
+}
+
+for (var p = 0; p < projects_slide_counts.length; p++){
+    for (var b = 0; b < projects_slide_counts[p]; b++){
+        id = "p" + p.toString() + "b" + b.toString()
+        try {
+            document.getElementById(id).addEventListener("click", change_slide.bind(null, p, b));           
+        } catch (error) {
+            continue
+        }
+    }
+}

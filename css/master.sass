@@ -217,7 +217,9 @@ a
                 list-style-type: none
                 padding: 0
     .project_image_container
+        position: relative
         display: flex
+        flex-direction: column
         min-height: 100%
         max-width: min(50%, 650px)
         max-height: 90vh
@@ -232,9 +234,28 @@ a
             width: 70%
             max-height: 80%
         .project_image
+            display: none
             max-width: 100%
             max-height: 100%
             padding: 30px
+        .default_image
+            display: inline-block
+        .slider-nav
+            position: absolute
+            display: flex
+            column-gap: 2rem
+            top: auto
+            bottom: 20px
+            z-index: 1
+        .slider-nav a
+            width: 0.5rem
+            height: 0.5rem
+            border-radius: 50%
+            background-color: #fff
+            opacity: 0.75
+            transition: opacity ease 250ms
+            &:hover
+                opacity: 1
 
 .skilmark
     font-weight: 700
