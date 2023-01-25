@@ -74,6 +74,63 @@ a
                 font-size: 150%
             @media (min-width: $pc_w)
                 font-size: 170%
+
+.scroll_down_arrow
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: relative
+    color: white
+    padding-top: 70px
+    bottom: 0px
+    padding-bottom: 80px
+    @media (max-width: $tablet_w)
+        padding-top: 50px
+        padding-bottom: 50px
+    p
+        margin: 5px
+    .arrow
+        box-sizing: border-box
+        height: 1.5vw
+        width: 1.5vw
+        border-style: solid
+        border-color: white
+        border-width: 0px 4px 4px 0px
+        transform: rotate(45deg)
+        animation: border-grow 1s ease-in-out infinite alternate
+        &:hover
+            animation-play-state: initial
+            // transition: border-width 150ms ease-in-out !important
+            // border-width: 0px 7px 7px 0px !important
+        @media (max-width: $mobile_landscape_w)
+            height: 5vw
+            width: 5vw
+        @media (min-width: $mobile_landscape_w) and (max-width: $tablet_w)
+            height: 4vw
+            width: 4vw
+        @media (min-width: $tablet_w)
+            height: 1.5vw
+            width: 1.5vw
+#scroll_for_about
+    position: absolute
+    color: black
+    bottom: 10px
+    p
+        margin: 0px
+    .arrow
+        border-color: #000000c5
+
+@keyframes border-grow
+    from
+        border-width: 0px 4px 4px 0px
+    50%
+        border-width: 0px 4px 4px 0px
+    75%
+        border-width: 0px 7px 7px 0px
+    100%
+        border-width: 0px 7px 7px 0px
+
  
 /* About  */
 .page_container
@@ -87,45 +144,9 @@ a
     @media (max-width: $tablet_w)
         padding-top: 50px
         padding-bottom: 50px
-        
+
 #about_container
     padding-bottom: 0px
-    #scroll_for_projects
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: center
-        position: relative
-        color: white
-        padding-top: 70px
-        bottom: 0px
-        padding-bottom: 80px
-        @media (max-width: $tablet_w)
-            padding-top: 50px
-            padding-bottom: 50px
-        p
-            margin: 5px
-        .arrow
-            box-sizing: border-box
-            height: 1.5vw
-            width: 1.5vw
-            border-style: solid
-            border-color: white
-            border-width: 0px 4px 4px 0px
-            transform: rotate(45deg)
-            transition: border-width 150ms ease-in-out
-            &:hover
-                border-bottom-width: 7px
-                border-right-width: 7px
-            @media (max-width: $mobile_landscape_w)
-                height: 5vw
-                width: 5vw
-            @media (min-width: $mobile_landscape_w) and (max-width: $tablet_w)
-                height: 4vw
-                width: 4vw
-            @media (min-width: $tablet_w)
-                height: 1.5vw
-                width: 1.5vw
 
 .content_area 
     display: flex

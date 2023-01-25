@@ -1,4 +1,13 @@
 const mediaQuery = window.matchMedia('(min-width: 1000px)')
+
+document.getElementById("about_anchor").addEventListener("click", e => {
+    document.getElementById("about_container").scrollIntoView(true);
+})
+
+document.getElementById("projects_anchor").addEventListener("click", e => {
+    document.getElementById("car_container").scrollIntoView(true);
+})
+
 if (mediaQuery.matches) {
     var solidworks = document.getElementById("solidworks");
     var fusion = document.getElementById("fusion");
@@ -88,8 +97,3 @@ if (mediaQuery.matches) {
         temp.remove();
     }
 }
-
-// For Automatic Scrolling
-document.getElementById("anchorElement").addEventListener("click", e => {
-    document.getElementById("car_container").scrollIntoView(true);
-})
