@@ -98,7 +98,7 @@ if (mediaQuery.matches) {
     }
 }
 
-const projects_slide_counts = [[2], [2], [2], [2], [2], [2]];
+const projects_slide_counts = [[2], [2], [5], [3], [2], [3]];
 const default_image_sizes = [];
 
 for (var p = 0; p < projects_slide_counts.length; p++){
