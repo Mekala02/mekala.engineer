@@ -40,7 +40,7 @@ if (mediaQuery.matches) {
     html.addEventListener("mouseover", function() {grow("90", "#dc4a25")});
     html.addEventListener("mouseout", remove);
 
-    css.addEventListener("mouseover", function() {grow("85", "#244add")});
+    css.addEventListener("mouseover", function() {grow("80", "#244add")});
     css.addEventListener("mouseout", remove);
 
     pytorch.addEventListener("mouseover", function() {grow("75", "#e31818")});
