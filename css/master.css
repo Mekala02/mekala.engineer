@@ -346,8 +346,8 @@ a {
   z-index: 1;
 }
 .content_area .project_image_container .slider-nav a {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 50%;
   background-color: #fff;
   opacity: 0.75;

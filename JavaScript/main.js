@@ -91,44 +91,25 @@ if (mediaQuery.matches) {
             }
         );
     }
-
     function remove(){
         var temp = document.getElementById("temp");
         temp.remove();
     }
 }
 
-const projects_slide_counts = [[2], [2], [5], [3], [2], [3]];
-const default_image_sizes = [];
-
-for (var p = 0; p < projects_slide_counts.length; p++){
-    id = "p" + p.toString()
-    default_image_sizes[p] = {height: document.getElementById(id).naturalHeight, width: document.getElementById(id).naturalWidth}
+// How many images are there
+const projects_image_counts = [[2], [2], [5], [3], [2], [3]];
+// p: project, b: button, i: image
+function change_slide(p, b){
+    height = document.getElementById("p"+p.toString()).clientHeight
+    width = document.getElementById("p"+p.toString()).clientWidth
+    document.getElementById("p"+p.toString()).src="images/p" + p.toString() + "i" + b.toString() + ".png";
+    document.getElementById("p"+p.toString()).style.width = width + "px"
+    document.getElementById("p"+p.toString()).style.height = height + "px"
 }
 
-console.log(default_image_sizes)
-// window.addEventListener("resize", response_to_resize)
-// response_to_resize()
-
-// for (var p = 0; p < projects_slide_counts.length; p++){
-//     try {
-//         document.getElementById("image_container_" + p).style.width = max_image_sizes[p]["width"] + "px"
-//         document.getElementById("image_container_" + p).style.height = max_image_sizes[p]["height"] + "px"
-//     } catch (error) {
-//         continue
-//     }
-// }
-
-function change_slide(project, button){
-    height = document.getElementById("p"+project.toString()).clientHeight
-    width = document.getElementById("p"+project.toString()).clientWidth
-    document.getElementById("p"+project.toString()).src="images/p" + project.toString() + "i" + button.toString() + ".png";
-    document.getElementById("p"+project.toString()).style.width = width + "px"
-    document.getElementById("p"+project.toString()).style.height = height + "px"
-}
-
-for (var p = 0; p < projects_slide_counts.length; p++){
-    for (var b = 0; b < projects_slide_counts[p]; b++){
+for (var p = 0; p < projects_image_counts.length; p++){
+    for (var b = 0; b < projects_image_counts[p]; b++){
         id = "p" + p.toString() + "b" + b.toString()
         try {
             document.getElementById(id).addEventListener("click", change_slide.bind(null, p, b));           
