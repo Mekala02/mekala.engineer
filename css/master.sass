@@ -249,14 +249,26 @@ a
             bottom: 20px
             z-index: 1
         .slider-nav a
+            position: relative
             width: 0.75rem
             height: 0.75rem
             border-radius: 50%
             background-color: #fff
-            opacity: 0.75
+            opacity: 0.5
             transition: opacity ease 250ms
+            &:after
+                position: absolute
+                content: ''
+                top: -12px
+                right: -10px
+                left: -10px
+                bottom: -12px
+                z-index: 40
+                // outline: 1px solid red
             &:hover
-                opacity: 1
+                transition: all 200ms
+                transform: scale(1.25)
+                cursor: pointer
 
 .skilmark
     font-weight: 700

@@ -101,16 +101,25 @@ if (mediaQuery.matches) {
     const projects_image_counts = [[2], [2], [5], [3], [2], [3]];
     // p: project, b: button, i: image
     function change_slide(p, b){
-        height = document.getElementById("p"+p.toString()).clientHeight
-        width = document.getElementById("p"+p.toString()).clientWidth
-        document.getElementById("p"+p.toString()).src="images/p" + p.toString() + "i" + b.toString() + ".png";
-        document.getElementById("p"+p.toString()).style.width = width + "px"
-        document.getElementById("p"+p.toString()).style.height = height + "px"
+        image_container = document.getElementById("p"+p.toString());
+        height = image_container.clientHeight;
+        width = image_container.clientWidth;
+        image_container.src="images/p" + p.toString() + "i" + b.toString() + ".png";
+        image_container.style.width = width + "px";
+        image_container.style.height = height + "px";
+        // ub: unselected button
+        for(var ub = 0; ub < projects_image_counts[p]; ub++){
+            document.getElementById("p"+p.toString()+"b"+ub.toString()).style.opacity = ".5";
+        }
+        selected_button = document.getElementById("p"+p.toString()+"b"+b.toString());
+        selected_button.style.opacity = "1";
     }
     
     for (var p = 0; p < projects_image_counts.length; p++){
         for (var b = 0; b < projects_image_counts[p]; b++){
-            id = "p" + p.toString() + "b" + b.toString()
-            document.getElementById(id).addEventListener("click", change_slide.bind(null, p, b));           
+            button = document.getElementById("p" + p.toString() + "b" + b.toString());
+            button.addEventListener("click", change_slide.bind(null, p, b));
+            if (b==0)
+                button.style.opacity = "1";
         }
     }
