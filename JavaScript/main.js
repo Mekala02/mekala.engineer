@@ -68,7 +68,7 @@ if (mediaQuery.matches) {
         div.style.opacity = "0.0001";
         div.style.width = "0.0001px";
         div.style.pointerEvents = "none";
-        document.getElementById("about").appendChild(div);
+        // document.getElementById("about").appendChild(div);
         //Animation
         div.animate(
             {
