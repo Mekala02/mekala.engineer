@@ -46,6 +46,9 @@ if (mediaQuery.matches) {
     
     flask.addEventListener("mouseover", function() {grow("60", "#ffde52")});
     flask.addEventListener("mouseout", remove);
+
+    ros.addEventListener("mouseover", function() {grow("60", "#ffde52")});
+    ros.addEventListener("mouseout", remove);
     
     const parentwidth = document.querySelector('#about').offsetWidth
     function grow(percentage, color){
@@ -98,7 +101,7 @@ if (mediaQuery.matches) {
     })
 
     // How many images are there
-    const projects_image_counts = [[2], [2], [5], [3], [2], [3]];
+    const projects_image_counts = [[2], [2], [5], [5], [3], [2], [3]];
     // p: project, b: button, i: image
     function change_slide(p, b){
         image_container = document.getElementById("p"+p.toString());
